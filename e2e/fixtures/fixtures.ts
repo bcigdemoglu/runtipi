@@ -11,6 +11,10 @@ export const createTestUser = async () => {
 };
 
 export const loginUser = async (page: Page) => {
+  await page.addLocatorHandler(page.getByText('Insecure configuration'), async () => {
+    await page.getByRole('button', { name: 'Close' }).click();
+  });
+
   // Create user in database
   await createTestUser();
 
