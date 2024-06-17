@@ -198,7 +198,13 @@ export const AppActions: React.FC<IProps> = ({ app, localDomain }) => {
     case 'restarting':
     case 'updating':
     case 'resetting':
-      buttons.push(LoadingButtion, CancelButton);
+      buttons.push(LoadingButton, CancelButton);
+      break;
+    case 'backingup':
+      buttons.push(LoadingButton, CancelButton);
+      break;
+    case 'restoring':
+      buttons.push(LoadingButton, CancelButton);
       break;
     case 'missing':
       buttons.push(InstallButton);
