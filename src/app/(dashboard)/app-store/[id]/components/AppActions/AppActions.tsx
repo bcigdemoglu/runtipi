@@ -120,7 +120,7 @@ export const AppActions: React.FC<IProps> = ({ app, localDomain }) => {
   const restartButton = (
     <ActionButton key="restart" IconComponent={IconRotateClockwise} onClick={restartDisclosure.open} title={t('APP_ACTION_RESTART')} />
   );
-  const LoadingButtion = <ActionButton key="loading" loading color="success" title={t('APP_ACTION_LOADING')} />;
+  const LoadingButton = <ActionButton key="loading" loading color="success" title={t('APP_ACTION_LOADING')} />;
   const CancelButton = <ActionButton key="cancel" IconComponent={IconX} onClick={stopDisclosure.open} title={t('APP_ACTION_CANCEL')} />;
   const InstallButton = <ActionButton key="install" onClick={installDisclosure.open} title={t('APP_ACTION_INSTALL')} color="success" />;
   const UpdateButton = (
